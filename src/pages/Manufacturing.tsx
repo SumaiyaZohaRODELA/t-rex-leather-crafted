@@ -9,34 +9,34 @@ const capabilities = [
   {
     icon: Paintbrush,
     title: "Custom Design",
-    description: "Our in-house design team works closely with clients to develop unique products that match their brand identity and market requirements.",
+    description: "Our design team develops unique products matching your brand identity.",
     features: ["Original designs", "Brand customization", "Color matching", "Logo embossing"],
   },
   {
     icon: Factory,
     title: "Bulk Production",
-    description: "Our manufacturing facility is equipped to handle large-scale orders while maintaining consistent quality across all units.",
+    description: "Manufacturing facility equipped for large-scale orders with consistency.",
     features: ["High capacity", "Consistent quality", "On-time delivery", "Flexible MOQ"],
   },
   {
     icon: CheckCircle,
     title: "Quality Control",
-    description: "Every product goes through rigorous quality checks at multiple stages to ensure it meets international standards.",
+    description: "Rigorous multi-stage quality checks meeting international standards.",
     features: ["Multi-stage inspection", "Material testing", "Finish verification", "Packaging QC"],
   },
   {
     icon: Package,
-    title: "OEM / Private Label",
-    description: "We offer complete OEM and private label solutions for brands looking to launch their own leather goods line.",
-    features: ["Private labeling", "Custom packaging", "Brand documentation", "Export compliance"],
+    title: "Private Label",
+    description: "Complete OEM and private label solutions for your brand.",
+    features: ["Private labeling", "Custom packaging", "Documentation", "Export compliance"],
   },
 ];
 
 const process = [
-  { step: "01", title: "Consultation", description: "Discuss your requirements and specifications" },
-  { step: "02", title: "Design", description: "Develop samples and finalize designs" },
-  { step: "03", title: "Production", description: "Manufacture with strict quality control" },
-  { step: "04", title: "Delivery", description: "Ship with proper documentation" },
+  { step: "01", title: "Consultation", description: "Discuss requirements" },
+  { step: "02", title: "Design", description: "Develop samples" },
+  { step: "03", title: "Production", description: "Manufacture with QC" },
+  { step: "04", title: "Delivery", description: "Ship worldwide" },
 ];
 
 const Manufacturing = () => {
@@ -45,64 +45,71 @@ const Manufacturing = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-leather-dark">
-          <div className="container mx-auto px-4 lg:px-8">
+        <section className="pt-40 pb-20 relative">
+          <div className="absolute inset-0 grain" />
+          <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="max-w-3xl">
-              <span className="text-gold text-sm font-medium tracking-widest uppercase">
+              <div className="w-12 h-px bg-copper mb-6" />
+              <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
                 Design & Manufacturing
-              </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mt-4 mb-6">
-                From Concept to Creation
+              </p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-light text-foreground leading-tight mb-6">
+                From Concept
+                <br />
+                <span className="font-semibold italic">to Creation</span>
               </h1>
-              <p className="text-primary-foreground/80 text-lg leading-relaxed">
-                T-REX Leather offers comprehensive manufacturing solutions, from custom design 
-                development to bulk production and private label services.
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-xl">
+                Comprehensive manufacturing solutions from custom design development 
+                to bulk production and private label services.
               </p>
             </div>
           </div>
         </section>
 
         {/* Image Section */}
-        <section className="relative h-[50vh] overflow-hidden">
-          <img
-            src={craftImg}
-            alt="Leather manufacturing process"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+        <section className="relative">
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="aspect-[21/9] overflow-hidden">
+              <img
+                src={craftImg}
+                alt="Manufacturing process"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </section>
 
         {/* Capabilities */}
-        <section className="py-24">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <span className="text-gold text-sm font-medium tracking-widest uppercase">
+        <section className="py-32 relative">
+          <div className="absolute inset-0 grain" />
+          <div className="container mx-auto px-6 lg:px-12 relative z-10">
+            <div className="max-w-2xl mb-20">
+              <div className="w-12 h-px bg-copper mb-6" />
+              <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
                 Our Capabilities
-              </span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-4">
-                End-to-End Manufacturing Solutions
+              </p>
+              <h2 className="text-3xl md:text-4xl font-display font-light text-foreground">
+                End-to-End <span className="font-semibold italic">Solutions</span>
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border/30">
               {capabilities.map((capability, index) => (
                 <div
                   key={index}
-                  className="bg-card border border-border/50 rounded-lg p-8 hover:shadow-elevated hover:border-gold/30 transition-all duration-300"
+                  className="bg-background p-10 group hover:bg-card transition-colors duration-500"
                 >
-                  <div className="w-14 h-14 bg-gold/10 rounded-lg flex items-center justify-center mb-6">
-                    <capability.icon className="w-7 h-7 text-gold" />
-                  </div>
+                  <capability.icon className="w-6 h-6 text-copper mb-6" strokeWidth={1.5} />
                   <h3 className="text-xl font-display font-semibold text-foreground mb-3">
                     {capability.title}
                   </h3>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-sm text-muted-foreground mb-6">
                     {capability.description}
                   </p>
                   <ul className="space-y-2">
                     {capability.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-foreground">
-                        <CheckCircle className="w-4 h-4 text-gold" />
+                      <li key={i} className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <span className="w-1 h-1 bg-copper rounded-full" />
                         {feature}
                       </li>
                     ))}
@@ -114,32 +121,31 @@ const Manufacturing = () => {
         </section>
 
         {/* Process */}
-        <section className="py-24 bg-muted/30">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <span className="text-gold text-sm font-medium tracking-widest uppercase">
+        <section className="py-32 bg-card border-t border-border/30 relative">
+          <div className="absolute inset-0 grain" />
+          <div className="container mx-auto px-6 lg:px-12 relative z-10">
+            <div className="text-center max-w-2xl mx-auto mb-20">
+              <div className="w-12 h-px bg-copper mx-auto mb-6" />
+              <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
                 Our Process
-              </span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-4">
-                How We Work
+              </p>
+              <h2 className="text-3xl md:text-4xl font-display font-light text-foreground">
+                How We <span className="font-semibold italic">Work</span>
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {process.map((item, index) => (
-                <div key={index} className="text-center relative">
-                  <div className="text-6xl font-display font-bold text-gold/20 mb-4">
+                <div key={index} className="text-center">
+                  <div className="text-5xl font-display font-light text-border mb-4">
                     {item.step}
                   </div>
-                  <h3 className="text-xl font-display font-semibold text-foreground mb-2">
+                  <h3 className="text-lg font-display font-semibold text-foreground mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-xs text-muted-foreground">
                     {item.description}
                   </p>
-                  {index < process.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 right-0 translate-x-1/2 w-16 border-t-2 border-dashed border-gold/30" />
-                  )}
                 </div>
               ))}
             </div>
@@ -147,18 +153,20 @@ const Manufacturing = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-20 bg-gradient-hero">
-          <div className="container mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-6">
-              Ready to Start Your Project?
+        <section className="py-32 relative">
+          <div className="absolute inset-0 grain" />
+          <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
+            <div className="w-12 h-px bg-copper mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-display font-light text-foreground mb-6">
+              Start Your <span className="font-semibold italic">Project</span>
             </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Let's discuss your manufacturing requirements and create something exceptional together.
+            <p className="text-muted-foreground mb-10 max-w-md mx-auto">
+              Let's discuss your manufacturing requirements and create something exceptional.
             </p>
-            <Button variant="hero" size="xl" asChild>
+            <Button variant="hero" size="lg" asChild>
               <Link to="/contact">
-                Start a Project
-                <ArrowRight className="w-5 h-5" />
+                Get Started
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
           </div>

@@ -1,30 +1,30 @@
-const clients = [
-  { name: "Bay", logo: "BAY" },
-  { name: "Omni Group", logo: "OMNI" },
-  { name: "Lotto", logo: "LOTTO" },
-];
-
 export function ClientLogos() {
-  return (
-    <section className="py-16 bg-leather-dark">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-12">
-          <p className="text-gold/80 text-sm font-medium tracking-widest uppercase">
-            Trusted By Leading Brands
-          </p>
-        </div>
+  const clients = [
+    { name: "Bay", display: "BAY" },
+    { name: "Omni Group", display: "OMNI" },
+    { name: "Lotto", display: "LOTTO" },
+  ];
 
-        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
-          {clients.map((client, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300"
-            >
-              <span className="text-2xl md:text-3xl font-display font-bold text-primary-foreground tracking-widest">
-                {client.logo}
-              </span>
-            </div>
-          ))}
+  return (
+    <section className="py-20 bg-card border-y border-border/30 relative">
+      <div className="absolute inset-0 grain" />
+      
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase">
+            Trusted by International Brands
+          </p>
+          
+          <div className="flex items-center gap-16 md:gap-24">
+            {clients.map((client, index) => (
+              <div
+                key={index}
+                className="text-xl md:text-2xl font-display font-semibold text-muted-foreground/50 hover:text-foreground transition-colors duration-500 tracking-wider"
+              >
+                {client.display}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

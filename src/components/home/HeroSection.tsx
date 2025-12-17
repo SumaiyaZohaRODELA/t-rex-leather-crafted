@@ -1,77 +1,83 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-leather.jpg";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroImage} 
+          alt="Premium leather goods" 
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
       </div>
 
+      {/* Grain Texture */}
+      <div className="absolute inset-0 grain" />
+
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 pt-32 pb-20">
-        <div className="max-w-3xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-2 mb-8 animate-fade-up opacity-0">
-            <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-            <span className="text-gold text-sm font-medium tracking-wide uppercase">
-              Premium Leather Manufacturer
-            </span>
-          </div>
+      <div className="relative z-10 container mx-auto px-6 lg:px-12 pt-32 pb-20">
+        <div className="max-w-2xl">
+          {/* Copper Line */}
+          <div className="w-16 h-px bg-copper mb-8 animate-fade-up opacity-0" />
+          
+          {/* Small Text */}
+          <p className="text-xs tracking-[0.4em] text-copper uppercase mb-6 animate-fade-up opacity-0 stagger-1">
+            Handcrafted Since Establishment
+          </p>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight mb-6 animate-fade-up opacity-0 stagger-1">
-            Crafting Excellence in{" "}
-            <span className="text-gradient-gold">Leather</span>
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-light text-foreground leading-[1.1] mb-8 animate-fade-up opacity-0 stagger-2">
+            Exceptional
+            <br />
+            <span className="font-semibold italic">Leather</span>
+            <br />
+            Craftsmanship
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-10 max-w-2xl animate-fade-up opacity-0 stagger-2">
-            T-REX Leather is Bangladesh's trusted manufacturer and exporter of premium leather goods. 
-            From bags to accessories, we deliver quality craftsmanship to international brands worldwide.
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-lg animate-fade-up opacity-0 stagger-3">
+            Bangladesh's premier manufacturer of fine leather goods. 
+            We craft timeless pieces for discerning international brands.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0 stagger-3">
-            <Button variant="hero" size="xl" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0 stagger-4">
+            <Button variant="hero" size="lg" asChild>
               <Link to="/products">
-                Explore Products
-                <ArrowRight className="w-5 h-5" />
+                View Collection
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/contact">Request Quote</Link>
+            <Button variant="heroOutline" size="lg" asChild>
+              <Link to="/about">Our Story</Link>
             </Button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 pt-10 border-t border-gold/20 animate-fade-up opacity-0 stagger-4">
-            <div>
-              <p className="text-3xl md:text-4xl font-display font-bold text-gold">15+</p>
-              <p className="text-primary-foreground/60 text-sm mt-1">Years Experience</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-display font-bold text-gold">50+</p>
-              <p className="text-primary-foreground/60 text-sm mt-1">Product Categories</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-display font-bold text-gold">100%</p>
-              <p className="text-primary-foreground/60 text-sm mt-1">Quality Assured</p>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gold/50 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-gold rounded-full" />
+      {/* Bottom Stats Bar */}
+      <div className="absolute bottom-0 left-0 right-0 border-t border-border/30 bg-background/50 backdrop-blur-sm">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-3 divide-x divide-border/30">
+            <div className="py-6 px-4 text-center">
+              <p className="text-2xl md:text-3xl font-display font-semibold text-foreground">15+</p>
+              <p className="text-[10px] tracking-widest text-muted-foreground uppercase mt-1">Years</p>
+            </div>
+            <div className="py-6 px-4 text-center">
+              <p className="text-2xl md:text-3xl font-display font-semibold text-foreground">50+</p>
+              <p className="text-[10px] tracking-widest text-muted-foreground uppercase mt-1">Products</p>
+            </div>
+            <div className="py-6 px-4 text-center">
+              <p className="text-2xl md:text-3xl font-display font-semibold text-copper">100%</p>
+              <p className="text-[10px] tracking-widest text-muted-foreground uppercase mt-1">Quality</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

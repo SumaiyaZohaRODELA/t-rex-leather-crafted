@@ -2,7 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import bagsImg from "@/assets/product-bags.jpg";
 import beltsImg from "@/assets/product-belts.jpg";
 import walletsImg from "@/assets/product-wallets.jpg";
@@ -13,37 +13,37 @@ const products = [
   {
     id: 1,
     name: "Leather Bags",
-    description: "Our extensive bag collection includes tote bags, messenger bags, briefcases, shoulder bags, and crossbody bags. Perfect for corporate gifting, retail, and wholesale markets.",
+    description: "Tote bags, messenger bags, briefcases, shoulder bags, and crossbody bags crafted for corporate and retail markets.",
     image: bagsImg,
-    features: ["Tote Bags", "Messenger Bags", "Briefcases", "Shoulder Bags", "Crossbody Bags"],
+    features: ["Tote Bags", "Messenger Bags", "Briefcases", "Shoulder Bags"],
   },
   {
     id: 2,
-    name: "Money Bags & Wallets",
-    description: "Premium wallets and money bags in various styles including bifold, trifold, card holders, and coin purses. Available in multiple leather finishes and colors.",
+    name: "Wallets & Purses",
+    description: "Premium wallets in bifold, trifold, card holders, and coin purses. Multiple leather finishes available.",
     image: walletsImg,
-    features: ["Bifold Wallets", "Trifold Wallets", "Card Holders", "Coin Purses", "Money Clips"],
+    features: ["Bifold Wallets", "Trifold", "Card Holders", "Coin Purses"],
   },
   {
     id: 3,
     name: "Leather Belts",
-    description: "High-quality leather belts for formal and casual wear. Available in various widths, buckle styles, and leather types to meet diverse market needs.",
+    description: "High-quality belts for formal and casual wear in various widths and buckle styles.",
     image: beltsImg,
-    features: ["Dress Belts", "Casual Belts", "Reversible Belts", "Custom Buckles", "Various Widths"],
+    features: ["Dress Belts", "Casual Belts", "Reversible", "Custom Buckles"],
   },
   {
     id: 4,
     name: "Backpacks",
-    description: "Stylish and functional leather backpacks designed for professionals and travelers. Durable construction with premium materials.",
+    description: "Stylish and functional leather backpacks for professionals and travelers.",
     image: backpacksImg,
-    features: ["Laptop Backpacks", "Travel Backpacks", "Day Packs", "Mini Backpacks", "Business Packs"],
+    features: ["Laptop Packs", "Travel Packs", "Day Packs", "Business"],
   },
   {
     id: 5,
     name: "Accessories",
-    description: "Complete your collection with our range of leather accessories including keychains, passport holders, luggage tags, and more.",
+    description: "Complete your collection with keychains, passport holders, luggage tags, and more.",
     image: accessoriesImg,
-    features: ["Keychains", "Passport Holders", "Luggage Tags", "Card Cases", "Pen Holders"],
+    features: ["Keychains", "Passport Holders", "Luggage Tags", "Card Cases"],
   },
 ];
 
@@ -53,75 +53,85 @@ const Products = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-leather-dark">
-          <div className="container mx-auto px-4 lg:px-8">
+        <section className="pt-40 pb-20 relative">
+          <div className="absolute inset-0 grain" />
+          <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="max-w-3xl">
-              <span className="text-gold text-sm font-medium tracking-widest uppercase">
-                Our Products
-              </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mt-4 mb-6">
-                Premium Leather Goods Collection
+              <div className="w-12 h-px bg-copper mb-6" />
+              <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+                Our Collection
+              </p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-light text-foreground leading-tight mb-6">
+                Premium Leather
+                <br />
+                <span className="font-semibold italic">Goods</span>
               </h1>
-              <p className="text-primary-foreground/80 text-lg leading-relaxed">
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-xl">
                 Explore our comprehensive range of leather products, crafted with precision 
-                and designed to meet international quality standards.
+                to meet international quality standards.
               </p>
             </div>
           </div>
         </section>
 
         {/* Products List */}
-        <section className="py-24">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="space-y-24">
+        <section className="pb-32 relative">
+          <div className="absolute inset-0 grain" />
+          <div className="container mx-auto px-6 lg:px-12 relative z-10">
+            <div className="space-y-1">
               {products.map((product, index) => (
                 <div
                   key={product.id}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                  }`}
+                  className="group border-t border-border/30 py-12 lg:py-16"
                 >
-                  <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                    <div className="relative overflow-hidden rounded-lg shadow-elevated">
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-full aspect-square object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-leather-dark/40 to-transparent" />
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    {/* Number */}
+                    <div className="lg:col-span-1">
+                      <span className="text-xs text-muted-foreground tracking-widest">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
                     </div>
-                  </div>
-                  <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                    <span className="text-gold text-sm font-medium tracking-widest uppercase">
-                      Category {String(product.id).padStart(2, "0")}
-                    </span>
-                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-4 mb-6">
-                      {product.name}
-                    </h2>
-                    <p className="text-muted-foreground leading-relaxed mb-8">
-                      {product.description}
-                    </p>
-                    <div className="mb-8">
-                      <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-4">
-                        Available Types
-                      </h4>
+
+                    {/* Image */}
+                    <div className="lg:col-span-3">
+                      <div className="aspect-square overflow-hidden bg-card">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="lg:col-span-6">
+                      <h2 className="text-2xl md:text-3xl font-display font-semibold text-foreground mb-4 group-hover:text-copper transition-colors">
+                        {product.name}
+                      </h2>
+                      <p className="text-muted-foreground mb-6 max-w-lg">
+                        {product.description}
+                      </p>
                       <div className="flex flex-wrap gap-2">
                         {product.features.map((feature, i) => (
                           <span
                             key={i}
-                            className="px-4 py-2 bg-muted text-muted-foreground text-sm rounded-full"
+                            className="px-3 py-1 text-xs tracking-wide text-muted-foreground border border-border/50 uppercase"
                           >
                             {feature}
                           </span>
                         ))}
                       </div>
                     </div>
-                    <Button variant="premium" asChild>
-                      <Link to="/contact">
-                        Inquire About This Product
-                        <ArrowRight className="w-4 h-4" />
+
+                    {/* CTA */}
+                    <div className="lg:col-span-2 flex lg:justify-end">
+                      <Link
+                        to="/contact"
+                        className="w-12 h-12 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-copper group-hover:border-copper transition-all duration-500"
+                      >
+                        <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-background transition-colors" />
                       </Link>
-                    </Button>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -130,20 +140,21 @@ const Products = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-20 bg-gradient-hero">
-          <div className="container mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-6">
-              Need Custom Products?
-            </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              We offer custom design and manufacturing services. Share your requirements and 
-              let us bring your vision to life.
+        <section className="py-32 bg-card border-t border-border/30 relative">
+          <div className="absolute inset-0 grain" />
+          <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
+            <div className="w-12 h-px bg-copper mx-auto mb-6" />
+            <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+              Custom Orders
             </p>
-            <Button variant="hero" size="xl" asChild>
-              <Link to="/contact">
-                Request Custom Quote
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+            <h2 className="text-3xl md:text-4xl font-display font-light text-foreground mb-6">
+              Need Something <span className="font-semibold italic">Unique?</span>
+            </h2>
+            <p className="text-muted-foreground mb-10 max-w-md mx-auto">
+              We offer custom design and manufacturing services tailored to your brand.
+            </p>
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/contact">Request Custom Quote</Link>
             </Button>
           </div>
         </section>

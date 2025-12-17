@@ -1,32 +1,47 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import craftImg from "@/assets/about-craftsmanship.jpg";
 
 export function CTASection() {
   return (
-    <section className="py-24 bg-gradient-hero relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
+    <section className="relative py-32 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={craftImg} 
+          alt="Leather craftsmanship" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/90" />
+      </div>
+
+      <div className="absolute inset-0 grain" />
       
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary-foreground mb-6">
-            Ready to Partner with Us?
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="w-12 h-px bg-copper mx-auto mb-8" />
+          <p className="text-xs tracking-[0.4em] text-copper uppercase mb-6">
+            Partner With Us
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-foreground mb-6">
+            Let's Create
+            <br />
+            <span className="font-semibold italic">Something Exceptional</span>
           </h2>
-          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-10">
-            Whether you need custom designs, bulk orders, or private label manufacturing, 
-            T-REX Leather is your trusted partner for premium leather goods.
+          <p className="text-muted-foreground leading-relaxed mb-10 max-w-lg mx-auto">
+            From custom designs to bulk manufacturing, we're ready to bring 
+            your vision to life with uncompromising quality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl" asChild>
+            <Button variant="hero" size="lg" asChild>
               <Link to="/contact">
-                Get in Touch
-                <ArrowRight className="w-5 h-5" />
+                Start a Project
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/products">Browse Catalog</Link>
+            <Button variant="heroOutline" size="lg" asChild>
+              <Link to="/products">View Catalog</Link>
             </Button>
           </div>
         </div>
