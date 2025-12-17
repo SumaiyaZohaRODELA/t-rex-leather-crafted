@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -29,86 +29,84 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-700",
         isScrolled
-          ? "bg-leather-dark/95 backdrop-blur-md py-3 shadow-elevated"
-          : "bg-transparent py-6"
+          ? "bg-background/80 backdrop-blur-xl py-4 border-b border-border/50"
+          : "bg-transparent py-8"
       )}
     >
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <span className="text-2xl md:text-3xl font-display font-bold text-gold tracking-tight">
-              T-REX
-            </span>
-            <span className="text-primary-foreground font-light tracking-widest text-sm uppercase">
-              Leather
-            </span>
+          <Link to="/" className="group">
+            <div className="flex flex-col">
+              <span className="text-2xl md:text-3xl font-display font-semibold text-foreground tracking-tight">
+                T-REX
+              </span>
+              <span className="text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
+                Fine Leather Goods
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:text-gold",
+                  "text-xs font-medium tracking-widest uppercase transition-colors duration-300 relative",
                   location.pathname === link.path
-                    ? "text-gold"
-                    : "text-primary-foreground/80"
+                    ? "text-copper"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {link.name}
+                {location.pathname === link.path && (
+                  <span className="absolute -bottom-1 left-0 w-full h-px bg-copper" />
+                )}
               </Link>
             ))}
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="tel:+8801712035733"
-              className="flex items-center gap-2 text-primary-foreground/80 hover:text-gold transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="text-sm">+880 1712-035733</span>
-            </a>
-            <Button variant="hero" size="sm" asChild>
-              <Link to="/contact">Get Quote</Link>
+          <div className="hidden lg:block">
+            <Button variant="heroOutline" size="sm" asChild>
+              <Link to="/contact">Inquire</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-primary-foreground p-2"
+            className="lg:hidden text-foreground p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="lg:hidden mt-6 pb-6 border-t border-gold/20 pt-6 animate-fade-in">
-            <div className="flex flex-col gap-4">
+          <nav className="lg:hidden mt-8 pb-8 border-t border-border/30 pt-8 animate-fade-in">
+            <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "text-base font-medium tracking-wide uppercase transition-colors duration-300",
+                    "text-sm font-medium tracking-widest uppercase transition-colors duration-300",
                     location.pathname === link.path
-                      ? "text-gold"
-                      : "text-primary-foreground/80 hover:text-gold"
+                      ? "text-copper"
+                      : "text-muted-foreground hover:text-foreground"
                   )}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Button variant="hero" className="mt-4" asChild>
-                <Link to="/contact">Get Quote</Link>
+              <Button variant="hero" className="mt-4 w-fit" asChild>
+                <Link to="/contact">Inquire Now</Link>
               </Button>
             </div>
           </nav>

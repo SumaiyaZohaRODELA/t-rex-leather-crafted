@@ -2,111 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* T-REX Leather Premium Color Palette */
-    --background: 40 20% 97%;
-    --foreground: 20 30% 10%;
+    /* T-REX Leather - Ultra Premium Dark Palette */
+    --background: 0 0% 6%;
+    --foreground: 0 0% 95%;
 
-    --card: 40 15% 95%;
-    --card-foreground: 20 30% 10%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 40 20% 97%;
-    --popover-foreground: 20 30% 10%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Rich Espresso Brown - Primary */
-    --primary: 20 50% 15%;
-    --primary-foreground: 40 20% 97%;
+    /* Deep Charcoal - Primary */
+    --primary: 0 0% 12%;
+    --primary-foreground: 0 0% 95%;
 
-    /* Warm Tan/Camel - Secondary */
-    --secondary: 35 40% 70%;
-    --secondary-foreground: 20 50% 15%;
+    /* Muted Dark */
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 85%;
 
-    /* Muted Leather Tones */
-    --muted: 35 20% 90%;
-    --muted-foreground: 20 15% 40%;
+    /* Subtle Grays */
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
 
-    /* Gold Accent */
-    --accent: 43 70% 55%;
-    --accent-foreground: 20 50% 10%;
+    /* Copper Accent */
+    --accent: 25 85% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 35 25% 85%;
-    --input: 35 25% 85%;
-    --ring: 43 70% 55%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 25 85% 55%;
 
-    --radius: 0.25rem;
+    --radius: 0.125rem;
 
     /* Custom Design Tokens */
-    --leather-dark: 20 45% 12%;
-    --leather-brown: 25 40% 25%;
-    --leather-tan: 35 45% 65%;
-    --leather-cream: 40 30% 92%;
-    --gold: 43 70% 55%;
-    --gold-light: 43 60% 70%;
+    --leather-black: 0 0% 6%;
+    --leather-charcoal: 0 0% 12%;
+    --leather-gray: 0 0% 20%;
+    --copper: 25 85% 55%;
+    --copper-light: 25 75% 65%;
+    --copper-dark: 25 90% 40%;
+    --cream: 40 30% 95%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(20 45% 12%) 0%, hsl(25 40% 20%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(43 70% 55%) 0%, hsl(43 60% 45%) 100%);
-    --gradient-overlay: linear-gradient(180deg, hsla(20, 45%, 12%, 0.9) 0%, hsla(20, 45%, 12%, 0.7) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 4%) 100%);
+    --gradient-copper: linear-gradient(135deg, hsl(25 85% 55%) 0%, hsl(25 90% 40%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(0, 0%, 0%, 0.7) 0%, hsla(0, 0%, 0%, 0.9) 100%);
+    --gradient-radial: radial-gradient(ellipse at center, hsla(0, 0%, 15%, 0.3) 0%, transparent 70%);
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsla(20, 45%, 12%, 0.15);
-    --shadow-elevated: 0 20px 40px -12px hsla(20, 45%, 12%, 0.25);
-    --shadow-gold: 0 4px 20px -4px hsla(43, 70%, 55%, 0.3);
+    --shadow-soft: 0 4px 30px -4px hsla(0, 0%, 0%, 0.5);
+    --shadow-elevated: 0 25px 50px -12px hsla(0, 0%, 0%, 0.8);
+    --shadow-copper: 0 4px 30px -4px hsla(25, 85%, 55%, 0.3);
 
     /* Sidebar */
-    --sidebar-background: 20 45% 12%;
-    --sidebar-foreground: 40 20% 97%;
-    --sidebar-primary: 43 70% 55%;
-    --sidebar-primary-foreground: 20 50% 10%;
-    --sidebar-accent: 25 40% 20%;
-    --sidebar-accent-foreground: 40 20% 97%;
-    --sidebar-border: 25 35% 25%;
-    --sidebar-ring: 43 70% 55%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 25 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 25 85% 55%;
   }
 
   .dark {
-    --background: 20 45% 8%;
-    --foreground: 40 20% 95%;
-
-    --card: 20 40% 12%;
-    --card-foreground: 40 20% 95%;
-
-    --popover: 20 40% 12%;
-    --popover-foreground: 40 20% 95%;
-
-    --primary: 43 70% 55%;
-    --primary-foreground: 20 45% 8%;
-
-    --secondary: 25 35% 25%;
-    --secondary-foreground: 40 20% 95%;
-
-    --muted: 25 30% 18%;
-    --muted-foreground: 35 20% 60%;
-
-    --accent: 43 70% 55%;
-    --accent-foreground: 20 45% 8%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 25 30% 20%;
-    --input: 25 30% 20%;
-    --ring: 43 70% 55%;
-
-    --sidebar-background: 20 50% 6%;
-    --sidebar-foreground: 40 20% 95%;
-    --sidebar-primary: 43 70% 55%;
-    --sidebar-primary-foreground: 20 50% 10%;
-    --sidebar-accent: 25 35% 15%;
-    --sidebar-accent-foreground: 40 20% 95%;
-    --sidebar-border: 25 30% 15%;
-    --sidebar-ring: 43 70% 55%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
   }
 }
 
@@ -120,18 +88,23 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    background: hsl(var(--copper));
+    color: hsl(var(--background));
   }
 }
 
 @layer components {
-  .text-gradient-gold {
+  .text-gradient-copper {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-gold);
+    background-image: var(--gradient-copper);
   }
 
-  .bg-gradient-hero {
-    background: var(--gradient-hero);
+  .bg-gradient-dark {
+    background: var(--gradient-dark);
   }
 
   .bg-gradient-overlay {
@@ -146,28 +119,60 @@
     box-shadow: var(--shadow-elevated);
   }
 
-  .shadow-gold {
-    box-shadow: var(--shadow-gold);
+  .shadow-copper {
+    box-shadow: var(--shadow-copper);
+  }
+
+  /* Premium Border Effect */
+  .border-glow {
+    position: relative;
+  }
+
+  .border-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsla(25, 85%, 55%, 0.5), transparent, hsla(25, 85%, 55%, 0.2));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  /* Copper Line Accent */
+  .copper-line {
+    @apply relative;
+  }
+
+  .copper-line::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-16 h-px bg-gradient-to-r from-copper to-transparent;
   }
 }
 
 @layer utilities {
   .animate-fade-up {
-    animation: fadeUp 0.8s ease-out forwards;
+    animation: fadeUp 1s ease-out forwards;
   }
 
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.8s ease-out forwards;
   }
 
   .animate-slide-in {
-    animation: slideIn 0.5s ease-out forwards;
+    animation: slideIn 0.6s ease-out forwards;
+  }
+
+  .animate-reveal {
+    animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   @keyframes fadeUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(40px);
     }
     to {
       opacity: 1;
@@ -176,22 +181,29 @@
   }
 
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   @keyframes slideIn {
     from {
       opacity: 0;
-      transform: translateX(-20px);
+      transform: translateX(-30px);
     }
     to {
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(60px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
     }
   }
 
@@ -200,4 +212,15 @@
   .stagger-3 { animation-delay: 0.3s; }
   .stagger-4 { animation-delay: 0.4s; }
   .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+
+  /* Grain Texture Overlay */
+  .grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+  }
 }

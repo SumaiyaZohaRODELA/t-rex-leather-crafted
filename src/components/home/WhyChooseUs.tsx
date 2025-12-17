@@ -1,60 +1,63 @@
-import { Shield, Award, Users, Globe } from "lucide-react";
+import { Gem, Shield, Sparkles, Globe } from "lucide-react";
 
 const features = [
   {
+    icon: Gem,
+    title: "Premium Materials",
+    description: "Only the finest leather sourced from trusted suppliers worldwide.",
+  },
+  {
     icon: Shield,
     title: "Quality Assured",
-    description: "Every product undergoes rigorous quality checks to meet international standards.",
+    description: "Rigorous multi-stage quality control for every single piece.",
   },
   {
-    icon: Award,
-    title: "Expert Craftsmanship",
-    description: "Skilled artisans with decades of experience in leather manufacturing.",
-  },
-  {
-    icon: Users,
-    title: "Trusted Partner",
-    description: "Long-term partnerships with Bay, Omni Group, Lotto and more global brands.",
+    icon: Sparkles,
+    title: "Expert Craft",
+    description: "Skilled artisans with decades of leather working experience.",
   },
   {
     icon: Globe,
     title: "Export Ready",
-    description: "Fully equipped for bulk orders and international shipping requirements.",
+    description: "Full compliance with international export standards.",
   },
 ];
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 bg-muted/30">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-32 bg-card relative">
+      <div className="absolute inset-0 grain" />
+      
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-gold text-sm font-medium tracking-widest uppercase">
+        <div className="max-w-2xl mb-20">
+          <div className="w-12 h-px bg-copper mb-6" />
+          <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
             Why Choose Us
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mt-4 mb-6">
-            Your Reliable Manufacturing Partner
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-foreground mb-6">
+            Excellence in
+            <br />
+            <span className="font-semibold italic">Every Detail</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            T-REX Leather combines traditional craftsmanship with modern production 
-            capabilities to deliver exceptional leather goods.
+            We combine traditional craftsmanship with modern production capabilities 
+            to deliver leather goods that exceed expectations.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/30">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group bg-card border border-border/50 rounded-lg p-8 hover:shadow-elevated hover:border-gold/30 transition-all duration-300"
+              className="bg-card p-8 lg:p-10 group hover:bg-secondary/50 transition-colors duration-500"
             >
-              <div className="w-14 h-14 bg-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-                <feature.icon className="w-7 h-7 text-gold" />
-              </div>
-              <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+              <feature.icon className="w-6 h-6 text-copper mb-6" strokeWidth={1.5} />
+              <h3 className="text-lg font-display font-semibold text-foreground mb-3">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>
             </div>
