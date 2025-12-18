@@ -20,8 +20,8 @@ export function CTASection() {
       
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="w-12 h-px bg-copper mx-auto mb-8" />
-          <p className="text-xs tracking-[0.4em] text-copper uppercase mb-6">
+          <div className="w-12 h-px bg-leather-tan mx-auto mb-8" />
+          <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-6">
             Partner With Us
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-foreground mb-6">

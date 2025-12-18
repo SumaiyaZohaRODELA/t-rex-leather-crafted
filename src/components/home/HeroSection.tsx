@@ -23,11 +23,11 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12 pt-32 pb-20">
         <div className="max-w-2xl">
-          {/* Copper Line */}
-          <div className="w-16 h-px bg-copper mb-8 animate-fade-up opacity-0" />
+          {/* Tan Line */}
+          <div className="w-16 h-px bg-leather-tan mb-8 animate-fade-up opacity-0" />
           
           {/* Small Text */}
-          <p className="text-xs tracking-[0.4em] text-copper uppercase mb-6 animate-fade-up opacity-0 stagger-1">
+          <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-6 animate-fade-up opacity-0 stagger-1">
             Handcrafted Since Establishment
           </p>
 
@@ -74,7 +74,7 @@ export function HeroSection() {
               <p className="text-[10px] tracking-widest text-muted-foreground uppercase mt-1">Products</p>
             </div>
             <div className="py-6 px-4 text-center">
-              <p className="text-2xl md:text-3xl font-display font-semibold text-copper">100%</p>
+              <p className="text-2xl md:text-3xl font-display font-semibold text-leather-tan">100%</p>
               <p className="text-[10px] tracking-widest text-muted-foreground uppercase mt-1">Quality</p>
             </div>
           </div>

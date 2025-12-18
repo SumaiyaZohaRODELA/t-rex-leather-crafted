@@ -49,8 +49,8 @@ const Manufacturing = () => {
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="max-w-3xl">
-              <div className="w-12 h-px bg-copper mb-6" />
-              <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+              <div className="w-12 h-px bg-leather-tan mb-6" />
+              <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
                 Design & Manufacturing
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-light text-foreground leading-tight mb-6">
@@ -84,8 +84,8 @@ const Manufacturing = () => {
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="max-w-2xl mb-20">
-              <div className="w-12 h-px bg-copper mb-6" />
-              <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+              <div className="w-12 h-px bg-leather-tan mb-6" />
+              <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
                 Our Capabilities
               </p>
               <h2 className="text-3xl md:text-4xl font-display font-light text-foreground">
@@ -99,7 +99,7 @@ const Manufacturing = () => {
                   key={index}
                   className="bg-background p-10 group hover:bg-card transition-colors duration-500"
                 >
-                  <capability.icon className="w-6 h-6 text-copper mb-6" strokeWidth={1.5} />
+                  <capability.icon className="w-6 h-6 text-leather-tan mb-6" strokeWidth={1.5} />
                   <h3 className="text-xl font-display font-semibold text-foreground mb-3">
                     {capability.title}
                   </h3>
@@ -109,7 +109,7 @@ const Manufacturing = () => {
                   <ul className="space-y-2">
                     {capability.features.map((feature, i) => (
                       <li key={i} className="flex items-center gap-2 text-xs text-muted-foreground">
-                        <span className="w-1 h-1 bg-copper rounded-full" />
+                        <span className="w-1 h-1 bg-leather-tan rounded-full" />
                         {feature}
                       </li>
                     ))}
@@ -125,8 +125,8 @@ const Manufacturing = () => {
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="text-center max-w-2xl mx-auto mb-20">
-              <div className="w-12 h-px bg-copper mx-auto mb-6" />
-              <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+              <div className="w-12 h-px bg-leather-tan mx-auto mb-6" />
+              <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
                 Our Process
               </p>
               <h2 className="text-3xl md:text-4xl font-display font-light text-foreground">
@@ -156,7 +156,7 @@ const Manufacturing = () => {
         <section className="py-32 relative">
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
-            <div className="w-12 h-px bg-copper mx-auto mb-6" />
+            <div className="w-12 h-px bg-leather-tan mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-display font-light text-foreground mb-6">
               Start Your <span className="font-semibold italic">Project</span>
             </h2>

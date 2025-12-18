@@ -57,8 +57,8 @@ const Products = () => {
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="max-w-3xl">
-              <div className="w-12 h-px bg-copper mb-6" />
-              <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+              <div className="w-12 h-px bg-leather-tan mb-6" />
+              <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
                 Our Collection
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-light text-foreground leading-tight mb-6">
@@ -105,7 +105,7 @@ const Products = () => {
 
                     {/* Content */}
                     <div className="lg:col-span-6">
-                      <h2 className="text-2xl md:text-3xl font-display font-semibold text-foreground mb-4 group-hover:text-copper transition-colors">
+                      <h2 className="text-2xl md:text-3xl font-display font-semibold text-foreground mb-4 group-hover:text-leather-tan transition-colors">
                         {product.name}
                       </h2>
                       <p className="text-muted-foreground mb-6 max-w-lg">
@@ -127,7 +127,7 @@ const Products = () => {
                     <div className="lg:col-span-2 flex lg:justify-end">
                       <Link
                         to="/contact"
-                        className="w-12 h-12 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-copper group-hover:border-copper transition-all duration-500"
+                        className="w-12 h-12 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-leather-tan group-hover:border-leather-tan transition-all duration-500"
                       >
                         <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-background transition-colors" />
                       </Link>
@@ -143,8 +143,8 @@ const Products = () => {
         <section className="py-32 bg-card border-t border-border/30 relative">
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
-            <div className="w-12 h-px bg-copper mx-auto mb-6" />
-            <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+            <div className="w-12 h-px bg-leather-tan mx-auto mb-6" />
+            <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
               Custom Orders
             </p>
             <h2 className="text-3xl md:text-4xl font-display font-light text-foreground mb-6">
