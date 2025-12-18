@@ -40,7 +40,7 @@ export function Footer() {
               Premium leather goods manufacturer and exporter from Bangladesh. 
               Crafting excellence for international brands.
             </p>
-            <div className="w-12 h-px bg-copper" />
+            <div className="w-12 h-px bg-leather-tan" />
           </div>
 
           {/* Navigation */}
@@ -53,7 +53,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     to={item.path}
-                    className="text-sm text-muted-foreground hover:text-copper transition-colors"
+                    className="text-sm text-muted-foreground hover:text-leather-tan transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -72,7 +72,7 @@ export function Footer() {
                 <li key={item}>
                   <Link
                     to="/products"
-                    className="text-sm text-muted-foreground hover:text-copper transition-colors"
+                    className="text-sm text-muted-foreground hover:text-leather-tan transition-colors"
                   >
                     {item}
                   </Link>
@@ -89,7 +89,7 @@ export function Footer() {
             <div className="space-y-4">
               <div>
                 <p className="text-[10px] tracking-widest text-muted-foreground uppercase mb-1">Phone</p>
-                <a href="tel:+8801712035733" className="text-sm text-foreground hover:text-copper transition-colors">
+                <a href="tel:+8801712035733" className="text-sm text-foreground hover:text-leather-tan transition-colors">
                   +880 1712-035733
                 </a>
               </div>
@@ -99,7 +99,7 @@ export function Footer() {
               </div>
               <div>
                 <p className="text-[10px] tracking-widest text-muted-foreground uppercase mb-1">Owner</p>
-                <p className="text-sm text-copper">Md. Shamsuzzoha</p>
+                <p className="text-sm text-leather-tan">Md. Shamsuzzoha</p>
               </div>
             </div>
           </div>

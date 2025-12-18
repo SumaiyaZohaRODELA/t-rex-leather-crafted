@@ -31,8 +31,8 @@ export function WhyChooseUs() {
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
         <div className="max-w-2xl mb-20">
-          <div className="w-12 h-px bg-copper mb-6" />
-          <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+          <div className="w-12 h-px bg-leather-tan mb-6" />
+          <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
             Why Choose Us
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-foreground mb-6">
@@ -53,7 +53,7 @@ export function WhyChooseUs() {
               key={index}
               className="bg-card p-8 lg:p-10 group hover:bg-secondary/50 transition-colors duration-500"
             >
-              <feature.icon className="w-6 h-6 text-copper mb-6" strokeWidth={1.5} />
+              <feature.icon className="w-6 h-6 text-leather-tan mb-6" strokeWidth={1.5} />
               <h3 className="text-lg font-display font-semibold text-foreground mb-3">
                 {feature.title}
               </h3>

@@ -16,10 +16,10 @@ const buttonVariants = cva(
         ghost: "hover:bg-secondary hover:text-secondary-foreground",
         link: "text-foreground underline-offset-4 hover:underline",
         // Ultra Premium T-REX Leather variants
-        hero: "bg-copper text-background font-medium hover:bg-copper-light tracking-widest uppercase text-xs shadow-copper",
-        heroOutline: "border border-copper/50 text-copper bg-transparent hover:bg-copper/10 font-medium tracking-widest uppercase text-xs",
-        premium: "bg-leather-charcoal text-foreground border border-border hover:border-copper/50 tracking-wide uppercase text-xs",
-        copper: "bg-gradient-to-r from-copper to-copper-dark text-background font-medium hover:opacity-90 shadow-copper tracking-widest uppercase text-xs",
+        hero: "bg-leather-tan text-background font-medium hover:bg-leather-caramel tracking-widest uppercase text-xs shadow-tan",
+        heroOutline: "border border-leather-tan/50 text-leather-tan bg-transparent hover:bg-leather-tan/10 font-medium tracking-widest uppercase text-xs",
+        premium: "bg-leather-brown text-foreground border border-border hover:border-leather-tan/50 tracking-wide uppercase text-xs",
+        tan: "bg-gradient-to-r from-leather-tan to-leather-brown text-background font-medium hover:opacity-90 shadow-tan tracking-widest uppercase text-xs",
         minimal: "text-muted-foreground hover:text-foreground tracking-wide uppercase text-xs",
       },
       size: {

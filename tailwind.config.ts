@@ -63,13 +63,10 @@ export default {
         },
         leather: {
           black: "hsl(var(--leather-black))",
-          charcoal: "hsl(var(--leather-charcoal))",
-          gray: "hsl(var(--leather-gray))",
-        },
-        copper: {
-          DEFAULT: "hsl(var(--copper))",
-          light: "hsl(var(--copper-light))",
-          dark: "hsl(var(--copper-dark))",
+          brown: "hsl(var(--leather-brown))",
+          tan: "hsl(var(--leather-tan))",
+          caramel: "hsl(var(--leather-caramel))",
+          beige: "hsl(var(--leather-beige))",
         },
         cream: "hsl(var(--cream))",
       },

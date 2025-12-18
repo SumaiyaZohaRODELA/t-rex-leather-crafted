@@ -33,8 +33,8 @@ const About = () => {
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="max-w-3xl">
-              <div className="w-12 h-px bg-copper mb-6" />
-              <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+              <div className="w-12 h-px bg-leather-tan mb-6" />
+              <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
                 Our Story
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-light text-foreground leading-tight mb-6">
@@ -69,8 +69,8 @@ const About = () => {
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
               <div>
-                <div className="w-12 h-px bg-copper mb-6" />
-                <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+                <div className="w-12 h-px bg-leather-tan mb-6" />
+                <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
                   Heritage
                 </p>
                 <h2 className="text-3xl md:text-4xl font-display font-light text-foreground mb-8">
@@ -103,8 +103,8 @@ const About = () => {
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="text-center max-w-2xl mx-auto mb-20">
-              <div className="w-12 h-px bg-copper mx-auto mb-6" />
-              <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+              <div className="w-12 h-px bg-leather-tan mx-auto mb-6" />
+              <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
                 Our Values
               </p>
               <h2 className="text-3xl md:text-4xl font-display font-light text-foreground">
@@ -115,7 +115,7 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border/30">
               {values.map((value, index) => (
                 <div key={index} className="bg-card p-10 text-center">
-                  <value.icon className="w-8 h-8 text-copper mx-auto mb-6" strokeWidth={1.5} />
+                  <value.icon className="w-8 h-8 text-leather-tan mx-auto mb-6" strokeWidth={1.5} />
                   <h3 className="text-xl font-display font-semibold text-foreground mb-4">
                     {value.title}
                   </h3>
@@ -133,8 +133,8 @@ const About = () => {
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="max-w-2xl mx-auto text-center">
-              <div className="w-12 h-px bg-copper mx-auto mb-6" />
-              <p className="text-xs tracking-[0.4em] text-copper uppercase mb-4">
+              <div className="w-12 h-px bg-leather-tan mx-auto mb-6" />
+              <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
                 Leadership
               </p>
               <h2 className="text-3xl md:text-4xl font-display font-light text-foreground mb-12">
@@ -142,13 +142,13 @@ const About = () => {
               </h2>
               
               <div className="bg-card border border-border/50 p-12">
-                <div className="w-20 h-20 bg-secondary rounded-full mx-auto mb-6 flex items-center justify-center border border-copper/30">
-                  <span className="text-2xl font-display font-semibold text-copper">MS</span>
+                <div className="w-20 h-20 bg-secondary rounded-full mx-auto mb-6 flex items-center justify-center border border-leather-tan/30">
+                  <span className="text-2xl font-display font-semibold text-leather-tan">MS</span>
                 </div>
                 <h3 className="text-2xl font-display font-semibold text-foreground mb-2">
                   Md. Shamsuzzoha
                 </h3>
-                <p className="text-copper text-sm uppercase tracking-widest mb-6">Founder & Owner</p>
+                <p className="text-leather-tan text-sm uppercase tracking-widest mb-6">Founder & Owner</p>
                 <p className="text-muted-foreground leading-relaxed max-w-md mx-auto">
                   With a passion for leather craftsmanship and a vision for excellence, 
                   Md. Shamsuzzoha established T-REX Leather to bring quality leather goods 
@@ -163,7 +163,7 @@ const About = () => {
         <section className="py-32 bg-card border-t border-border/30 relative">
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
-            <div className="w-12 h-px bg-copper mx-auto mb-6" />
+            <div className="w-12 h-px bg-leather-tan mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-display font-light text-foreground mb-6">
               Ready to Work <span className="font-semibold italic">Together?</span>
             </h2>
