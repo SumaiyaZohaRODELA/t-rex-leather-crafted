@@ -46,8 +46,8 @@ const Contact = () => {
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="max-w-3xl">
-              <div className="w-12 h-px bg-leather-tan mb-6" />
-              <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
+              <div className="w-12 h-px bg-yellow-yolk mb-6" />
+              <p className="text-xs tracking-[0.4em] text-yellow-yolk uppercase mb-4">
                 Contact Us
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-light text-foreground leading-tight mb-6">
@@ -70,8 +70,8 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
               {/* Contact Info */}
               <div>
-                <div className="w-12 h-px bg-leather-tan mb-6" />
-                <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
+                <div className="w-12 h-px bg-yellow-yolk mb-6" />
+                <p className="text-xs tracking-[0.4em] text-yellow-yolk uppercase mb-4">
                   Get in Touch
                 </p>
                 <h2 className="text-3xl font-display font-light text-foreground mb-8">
@@ -85,13 +85,13 @@ const Contact = () => {
                 <div className="space-y-8">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-card border border-border/50 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-4 h-4 text-leather-tan" />
+                      <Phone className="w-4 h-4 text-yellow-yolk" />
                     </div>
                     <div>
                       <p className="text-[10px] tracking-widest text-muted-foreground uppercase mb-1">Phone</p>
                       <a
                         href="tel:+8801712035733"
-                        className="text-foreground hover:text-leather-tan transition-colors"
+                        className="text-foreground hover:text-yellow-yolk transition-colors"
                       >
                         +880 1712-035733
                       </a>
@@ -100,13 +100,13 @@ const Contact = () => {
 
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-card border border-border/50 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-4 h-4 text-leather-tan" />
+                      <Mail className="w-4 h-4 text-yellow-yolk" />
                     </div>
                     <div>
                       <p className="text-[10px] tracking-widest text-muted-foreground uppercase mb-1">Email</p>
                       <a
                         href="mailto:info@trexleather.com"
-                        className="text-foreground hover:text-leather-tan transition-colors"
+                        className="text-foreground hover:text-yellow-yolk transition-colors"
                       >
                         info@trexleather.com
                       </a>
@@ -115,7 +115,7 @@ const Contact = () => {
 
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-card border border-border/50 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-4 h-4 text-leather-tan" />
+                      <MapPin className="w-4 h-4 text-yellow-yolk" />
                     </div>
                     <div>
                       <p className="text-[10px] tracking-widest text-muted-foreground uppercase mb-1">Location</p>
@@ -127,13 +127,13 @@ const Contact = () => {
                 {/* Owner Info */}
                 <div className="mt-12 p-6 bg-card border border-border/30">
                   <p className="text-[10px] tracking-widest text-muted-foreground uppercase mb-2">Owner & Director</p>
-                  <p className="text-lg text-leather-tan font-display font-semibold">Md. Shamsuzzoha</p>
+                  <p className="text-lg text-yellow-yolk font-display font-semibold">Md. Shamsuzzoha</p>
                 </div>
               </div>
 
               {/* Contact Form */}
               <div className="bg-card border border-border/30 p-10 lg:p-12">
-                <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
+                <p className="text-xs tracking-[0.4em] text-yellow-yolk uppercase mb-4">
                   Send Message
                 </p>
                 <h3 className="text-2xl font-display font-light text-foreground mb-8">
@@ -153,7 +153,7 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="Your name"
                         required
-                        className="bg-background border-border/50 focus:border-leather-tan"
+                        className="bg-background border-border/50 focus:border-yellow-yolk"
                       />
                     </div>
                     <div>
@@ -168,7 +168,7 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="your@email.com"
                         required
-                        className="bg-background border-border/50 focus:border-leather-tan"
+                        className="bg-background border-border/50 focus:border-yellow-yolk"
                       />
                     </div>
                   </div>
@@ -184,7 +184,7 @@ const Contact = () => {
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="Your company"
-                        className="bg-background border-border/50 focus:border-leather-tan"
+                        className="bg-background border-border/50 focus:border-yellow-yolk"
                       />
                     </div>
                     <div>
@@ -198,7 +198,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+1 234 567 890"
-                        className="bg-background border-border/50 focus:border-leather-tan"
+                        className="bg-background border-border/50 focus:border-yellow-yolk"
                       />
                     </div>
                   </div>
@@ -215,7 +215,7 @@ const Contact = () => {
                       placeholder="Tell us about your requirements..."
                       rows={5}
                       required
-                      className="bg-background border-border/50 focus:border-leather-tan resize-none"
+                      className="bg-background border-border/50 focus:border-yellow-yolk resize-none"
                     />
                   </div>
 

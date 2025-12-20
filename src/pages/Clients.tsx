@@ -43,8 +43,8 @@ const Clients = () => {
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="max-w-3xl">
-              <div className="w-12 h-px bg-leather-tan mb-6" />
-              <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
+              <div className="w-12 h-px bg-yellow-yolk mb-6" />
+              <p className="text-xs tracking-[0.4em] text-yellow-yolk uppercase mb-4">
                 Our Clients
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-light text-foreground leading-tight mb-6">
@@ -70,8 +70,8 @@ const Clients = () => {
                   key={index}
                   className="bg-background p-10 group hover:bg-card transition-colors duration-500"
                 >
-                  <div className="w-14 h-14 bg-card border border-border/50 flex items-center justify-center mb-8 group-hover:border-leather-tan/50 transition-colors">
-                    <span className="text-lg font-display font-semibold text-leather-tan">
+                  <div className="w-14 h-14 bg-card border border-border/50 flex items-center justify-center mb-8 group-hover:border-yellow-yolk/50 transition-colors">
+                    <span className="text-lg font-display font-semibold text-yellow-yolk">
                       {client.name.charAt(0)}
                     </span>
                   </div>
@@ -84,7 +84,7 @@ const Clients = () => {
                   <ul className="space-y-2">
                     {client.highlights.map((highlight, i) => (
                       <li key={i} className="flex items-center gap-2 text-xs text-muted-foreground">
-                        <span className="w-1 h-1 bg-leather-tan rounded-full" />
+                        <span className="w-1 h-1 bg-yellow-yolk rounded-full" />
                         {highlight}
                       </li>
                     ))}
@@ -100,8 +100,8 @@ const Clients = () => {
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <div className="text-center max-w-2xl mx-auto mb-20">
-              <div className="w-12 h-px bg-leather-tan mx-auto mb-6" />
-              <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
+              <div className="w-12 h-px bg-yellow-yolk mx-auto mb-6" />
+              <p className="text-xs tracking-[0.4em] text-yellow-yolk uppercase mb-4">
                 Testimonials
               </p>
               <h2 className="text-3xl md:text-4xl font-display font-light text-foreground">
@@ -117,7 +117,7 @@ const Clients = () => {
                 >
                   <div className="flex gap-1 mb-6">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-leather-tan text-leather-tan" />
+                      <Star key={i} className="w-4 h-4 fill-yellow-yolk text-yellow-yolk" />
                     ))}
                   </div>
                   <p className="text-foreground italic text-lg mb-6 font-display">
@@ -136,7 +136,7 @@ const Clients = () => {
         <section className="py-32 relative">
           <div className="absolute inset-0 grain" />
           <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
-            <div className="w-12 h-px bg-leather-tan mx-auto mb-6" />
+            <div className="w-12 h-px bg-yellow-yolk mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-display font-light text-foreground mb-6">
               Become Our <span className="font-semibold italic">Partner</span>
             </h2>

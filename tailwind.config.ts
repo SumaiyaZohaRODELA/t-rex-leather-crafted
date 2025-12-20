@@ -69,6 +69,17 @@ export default {
           beige: "hsl(var(--leather-beige))",
         },
         cream: "hsl(var(--cream))",
+        yellow: {
+          yolk: "hsl(var(--yellow-yolk))",
+          golden: "hsl(var(--yellow-golden))",
+          soft: "hsl(var(--yellow-soft))",
+          pale: "hsl(var(--yellow-pale))",
+        },
+        cheetah: {
+          dark: "hsl(var(--cheetah-dark))",
+          spot: "hsl(var(--cheetah-spot))",
+          base: "hsl(var(--cheetah-base))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

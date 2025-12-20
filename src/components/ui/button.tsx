@@ -15,11 +15,11 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-secondary hover:text-secondary-foreground",
         link: "text-foreground underline-offset-4 hover:underline",
-        // Ultra Premium T-REX Leather variants
-        hero: "bg-leather-tan text-background font-medium hover:bg-leather-caramel tracking-widest uppercase text-xs shadow-tan",
-        heroOutline: "border border-leather-tan/50 text-leather-tan bg-transparent hover:bg-leather-tan/10 font-medium tracking-widest uppercase text-xs",
-        premium: "bg-leather-brown text-foreground border border-border hover:border-leather-tan/50 tracking-wide uppercase text-xs",
-        tan: "bg-gradient-to-r from-leather-tan to-leather-brown text-background font-medium hover:opacity-90 shadow-tan tracking-widest uppercase text-xs",
+        // Ultra Premium T-REX Leather variants - Light Theme with Yellow
+        hero: "bg-yellow-yolk text-foreground font-medium hover:bg-yellow-golden tracking-widest uppercase text-xs shadow-yellow",
+        heroOutline: "border border-yellow-yolk/60 text-foreground bg-transparent hover:bg-yellow-yolk/10 font-medium tracking-widest uppercase text-xs",
+        premium: "bg-leather-brown text-cream border border-leather-brown/20 hover:border-yellow-yolk/50 tracking-wide uppercase text-xs",
+        tan: "bg-gradient-to-r from-yellow-yolk to-yellow-golden text-foreground font-medium hover:opacity-90 shadow-yellow tracking-widest uppercase text-xs",
         minimal: "text-muted-foreground hover:text-foreground tracking-wide uppercase text-xs",
       },
       size: {
