@@ -53,8 +53,8 @@ export function ProductShowcase() {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-20">
           <div>
-            <div className="w-12 h-px bg-leather-tan mb-6" />
-            <p className="text-xs tracking-[0.4em] text-leather-tan uppercase mb-4">
+            <div className="w-12 h-px bg-yellow-yolk mb-6" />
+            <p className="text-xs tracking-[0.4em] text-yellow-yolk uppercase mb-4">
               Our Collection
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-foreground">
@@ -85,15 +85,15 @@ export function ProductShowcase() {
             <div className="absolute bottom-0 left-0 right-0 p-8">
               <div className="flex items-end justify-between">
                 <div>
-                  <p className="text-[10px] tracking-widest text-leather-tan uppercase mb-2">
+                  <p className="text-[10px] tracking-widest text-yellow-yolk uppercase mb-2">
                     {categories[0].subtitle}
                   </p>
                   <h3 className="text-2xl md:text-3xl font-display font-semibold text-foreground">
                     {categories[0].name}
                   </h3>
                 </div>
-                <div className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-leather-tan group-hover:border-leather-tan transition-all duration-500">
-                  <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-background transition-colors" />
+                <div className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-yellow-yolk group-hover:border-yellow-yolk transition-all duration-500">
+                  <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
                 </div>
               </div>
             </div>
@@ -115,15 +115,15 @@ export function ProductShowcase() {
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="flex items-end justify-between">
                   <div>
-                    <p className="text-[10px] tracking-widest text-leather-tan uppercase mb-1">
+                    <p className="text-[10px] tracking-widest text-yellow-yolk uppercase mb-1">
                       {category.subtitle}
                     </p>
                     <h3 className="text-lg font-display font-semibold text-foreground">
                       {category.name}
                     </h3>
                   </div>
-                  <div className="w-8 h-8 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-leather-tan group-hover:border-leather-tan transition-all duration-500">
-                    <ArrowUpRight className="w-3 h-3 text-muted-foreground group-hover:text-background transition-colors" />
+                  <div className="w-8 h-8 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-yellow-yolk group-hover:border-yellow-yolk transition-all duration-500">
+                    <ArrowUpRight className="w-3 h-3 text-muted-foreground group-hover:text-foreground transition-colors" />
                   </div>
                 </div>
               </div>

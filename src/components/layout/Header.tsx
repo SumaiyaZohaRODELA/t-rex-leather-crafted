@@ -58,13 +58,13 @@ export function Header() {
                 className={cn(
                   "text-xs font-medium tracking-widest uppercase transition-colors duration-300 relative",
                   location.pathname === link.path
-                    ? "text-leather-tan"
+                    ? "text-yellow-yolk"
                     : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {link.name}
                 {location.pathname === link.path && (
-                  <span className="absolute -bottom-1 left-0 w-full h-px bg-leather-tan" />
+                  <span className="absolute -bottom-1 left-0 w-full h-px bg-yellow-yolk" />
                 )}
               </Link>
             ))}
@@ -98,7 +98,7 @@ export function Header() {
                   className={cn(
                     "text-sm font-medium tracking-widest uppercase transition-colors duration-300",
                     location.pathname === link.path
-                      ? "text-leather-tan"
+                      ? "text-yellow-yolk"
                       : "text-muted-foreground hover:text-foreground"
                   )}
                 >
